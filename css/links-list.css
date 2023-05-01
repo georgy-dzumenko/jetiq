@@ -1,0 +1,15 @@
+
+.links-list__label {
+    width: 100%;
+    text-align: center;
+}
+.links-list {
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+}
+.links-list__link {
+    text-decoration: none;
+}
