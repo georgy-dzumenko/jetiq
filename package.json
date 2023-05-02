@@ -1,0 +1,22 @@
+{
+  "name": "jet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgy-dzumenko/jetiq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgy-dzumenko/jetiq/issues"
+  },
+  "homepage": "https://github.com/georgy-dzumenko/jetiq#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

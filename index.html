@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 
     <link rel="stylesheet" href="./css/button-group.css">
@@ -18,57 +15,10 @@
     <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">
-            Повідомлення викладачу у ПК і на електронну пошту.
-        </h1>
-        <p class="links-list__label">
-            Повідомлення
-        </p>
-        <ul class="links-list">
-            <li class="links-list__item">
-                <a href="#" class="links-list__link">Вхідні</a>
-            </li>
-            <li class="links-list__item">
-                <a href="#" class="links-list__link">Групам</a>
-            </li>
-            <li class="links-list__item">
-                <a href="#" class="links-list__link">Студентам</a>
-            </li>
-            <li class="links-list__item">
-                <a href="#" class="links-list__link">Викладачам</a>
-            </li>
-            <li class="links-list__item">
-                <a href="#" class="links-list__link">Надіслані</a>
-            </li>
-        </ul>
-    </header>
-    <section class="main">
-        <form action="" class="send-message">
-            <div class="send-message__container">
-                <input type="text" class="send-message__to-whom">
-                <textarea name="" id="" class="send-message__message-content"></textarea>
-                <div class="button-group send-message__send-button-group">
-                    <button class="button-group__item button-attach">Б</button>
-                    <button class="button-group__item button-send">Надіслати</button>
-                </div>
-            </div>
-        </form>
-    </section>
-    <footer class="footer">
-        <h2 class="footer__authors">
-            <ul class="footer__authors-list">
-                <li class="footer__author-column">
-                    <a href="#" class="footer__author-link">Goga</a>
-                </li>
-                <li class="footer__author-column">
-                    <a href="#" class="footer__author-link">Vlad</a>
-                </li>
-                <li class="footer__author-column">
-                    <a href="#" class="footer__author-link">Roma</a>
-                </li>
-            </ul>
-        </h2>
-    </footer>
+    <div id="root">
+    </div>
+
+    <script type="module" src="./js/writeToTeacher.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
