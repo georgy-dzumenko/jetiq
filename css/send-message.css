@@ -14,10 +14,12 @@
     height: 300px;
 }
 .send-message__to-whom {
+    box-sizing: border-box;
     width: 100%;
     height: 30px;
 }
 .send-message__message-content {
+    box-sizing: border-box;
     width: 100%;
     flex: 1;
 }

@@ -3,6 +3,9 @@
 }
 
 .header__title {
+    font-family: Merriweather;
+    font-weight: 500;
+    font-size: 40px;
     width: 100%;
     text-align: center;
 }
