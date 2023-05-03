@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    
+    <link rel="stylesheet" href="./css/input.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/button-group.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -48,11 +49,22 @@
                 <section class="main">
                     <form action="" class="send-message">
                         <div class="send-message__container">
-                            <input type="text" class="send-message__to-whom">
-                            <textarea name="" id="" class="send-message__message-content"></textarea>
-                            <div class="button-group send-message__send-button-group">
-                                <button class="button-group__item button-attach">Б</button>
-                                <button class="button-group__item button-send">Надіслати</button>
+
+                            <div class="input-container send-message__to-whom">
+                                <label class="input-container__label">Кому</label>
+                                <input type="text" class="input-container__input" placeholder="a">
+                                
+                                <ul class="send-message__serched-list">
+                                </ul>
+                            </div>
+                            
+                            <div class="input-container send-message__message-content">
+                                <label class="input-container__label input-container__label--right">Ваше повідомлення</label>
+                                <textarea placeholder="a" name="" id="" class="input-container__input"></textarea>
+                                <div class="button-group send-message__send-button-group">
+                                    <button class="button-group__item button-attach"><div class="icon--attach"></div></button>
+                                    <button id="send-button" class="button-group__item button-send">Надіслати</button>
+                                </div>
                             </div>
                         </div>
                     </form>

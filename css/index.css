@@ -23,8 +23,8 @@
         transform: rotateZ(0deg)
     }
     50% {
-        width: 1000px;
-        height: 500px;
+        width: 1300px;
+        height: 700px;
     }
     100% {
         transform: rotateZ(360deg)
@@ -46,8 +46,8 @@
     content: "";
     position: absolute;
     background: radial-gradient(var(--teal-color) 20%, transparent, transparent);
-    height: 1000px;
-    width: 500px;
+    height: 1300px;
+    width: 700px;
     bottom: 0;
     right: 0;
     background-repeat: no-repeat;
@@ -61,9 +61,9 @@
 
 .main-container::before {
     content: "";
-    background: radial-gradient(var(--turquoise-color) 20%, transparent, transparent);
-    height: 1000px;
-    width: 500px;
+    background: radial-gradient(var(--turquoise-color) 10%, transparent, transparent);
+    height: 1300px;
+    width: 700px;
     display: flex;
     position: absolute;
     background-repeat: no-repeat;

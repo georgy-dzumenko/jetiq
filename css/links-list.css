@@ -65,7 +65,7 @@
 .links-list__link:hover::after,
 .links-list__link:hover::before{
     background-color: var(--night-color);
-    width: 100%;
+    width: calc(100% - 10px);
 }
 
 .links-list__link::after {
