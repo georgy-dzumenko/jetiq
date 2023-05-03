@@ -1,0 +1,81 @@
+@import url(./header.css);
+@import url(./links-list.css);
+@import url(./button-group.css);
+@import url(./main.css);
+@import url(./send-message.css);
+@import url(./footer.css);
+@import url(./reset.css);
+
+
+#root{
+    --strong-color: #747DED;
+    --light-color: #79A4F7;
+    --blend-color: #7AB8E1;
+    --teal-color:#79E6F7;
+    --turquoise-color: #74EDDD;
+    --night-color: #010141;
+
+    overflow: hidden;
+}
+
+@keyframes gradient-rotate {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    50% {
+        width: 1000px;
+        height: 500px;
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+
+.main-container{
+    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    background: rgba(148,187,233,1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main-container::after {
+    content: "";
+    position: absolute;
+    background: radial-gradient(var(--teal-color) 20%, transparent, transparent);
+    height: 1000px;
+    width: 500px;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.6;
+    transform-origin: center;
+    animation: gradient-rotate 10s linear infinite;
+}
+
+.main-container::before {
+    content: "";
+    background: radial-gradient(var(--turquoise-color) 20%, transparent, transparent);
+    height: 1000px;
+    width: 500px;
+    display: flex;
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: gradient-rotate 10s linear infinite;
+}
+
+.second-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+}

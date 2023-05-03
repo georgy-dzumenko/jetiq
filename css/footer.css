@@ -1,14 +1,23 @@
 
 .footer {
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid var(--night-color);
+    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.068);
 }
 .footer__authors {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
 }
 .footer__authors-list {
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 20px;
-    margin-top: 20px;
     text-decoration: none;
 }
 .footer__author-column {
@@ -21,5 +30,14 @@
 
 .footer__author-link{
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+    color: var(--night-color);
+    font-weight: 500;
+}
+
+.footer__text{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 25px;
 }
