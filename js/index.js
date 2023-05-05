@@ -1,49 +1,74 @@
 // import {innerHTML} from "./writeToTeacher";
 
-import Babiuk from "../assets/teachers/babiuk.jpeg"
-import Denysiuk from "../assets/teachers/denysiuk.jpeg"
-import Kyrylaschuk from "../assets/teachers/kyrylaschuk.jpeg"
-import Radomska from "../assets/teachers/radomska.jpeg"
-import Voitko from "../assets/teachers/voitko.jpeg"
-
 const teachers = [
     {
-      img: Kyrylaschuk,
+      img: "../assets/teachers/kyrylaschuk.jpeg",
       name: "Кирилащук Світлана Аналоліївна",
       position: "декан",
+      id: 1
     },
     {
-      img: Babiuk,
+      img: "../assets/teachers/babiuk.jpeg",
       name: "Бабюк Наталя Петрівна",
       position: "доцент",
+      id: 2
     },
     {
-      img: Denysiuk,
+      img: "../assets/teachers/denysiuk.jpeg",
       name: "Денисюк Алла Василівна",
-      position: "асистент"
+      position: "асистент",
+      id: 3
     },
     {
-      img: Voitko,
+      img: "../assets/teachers/voitko.jpeg",
       name: "Войтко Вікторія Володимирівна",
-      position: "доцент"
+      position: "доцент",
+      id: 4
     },
     {
-      img: Radomska,
+      img: "../assets/teachers/radomska.jpeg",
       name: "Радомська Людмила Анатоліївна",
-      position: "доцент"
+      position: "доцент",
+      id: 5
     }
 ]
 
 const onClick = (event) => {
-    console.log(event.clientX)
+    event.preventDefault();
+    console.log(event.clientX);
+}
+
+let selectedId = null;
+
+const onTeacherClick = ({id}) => () => {
+    selectedId = id;
+}
+
+const createTeacherElement = ({img, name, position, id}) => {
+    const el = document.createElement("li");
+    el.onclick = onTeacherClick({id});
+    el.className = "send-message__teacher";
+    el.innerHTML = `
+        <img class="send-message__teacher-photo" src="${img}"></img>
+        <div class="send-message__teacher-data">
+            <span class="send-message__teacher-name">${name}</span>
+            <span class="send-message__teacher-position">${position}</span>
+        </div>
+    `
+
+    return el;
 }
 
 const onSearch = (event) => {
-    // ul.send-message__serched-list
-    console.log("a");
+    // console.log(teachers.filter((a) => a.name.includes(event.target.value)))
+    // console.log("a")
+    document.querySelector("ul.send-message__serched-list").innerHTML = "";
+    teachers.filter((a) => a.name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase())).forEach((a) => {
+        document.querySelector("ul.send-message__serched-list").appendChild(createTeacherElement(a));
+    })
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("input.input-container__input").addEventListener("input", onSearch)
+    document.querySelector("input.input-container__input").addEventListener("input", onSearch);
     document.querySelector("#send-button").addEventListener("click", onClick);
 })

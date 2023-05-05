@@ -18,5 +18,8 @@
   "homepage": "https://github.com/georgy-dzumenko/jetiq#readme",
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.81.0"
   }
 }
