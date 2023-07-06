@@ -4,32 +4,31 @@
     padding: 0 15px;
 }
 
-.incoming__row_table{
 
+.incoming__row_table:hover {
+    background-color: var(--teal-color);
 }
 
 .title-row {
     text-align: left;
     vertical-align: bottom;
-    height: 30px;
+    height: 15px;
     padding-bottom: 0;
     background-color: var(--night-color);
     color: white;
 }
 
 .title-row-one{
-    border-radius:10px 0 0 0 ;
+    border-radius:8px 0 0 0 ;
 }
 
 .title-row-last{
-    border-radius: 0 10px 0 0;
+    border-radius: 0 8px 0 0;
 }
 
 .massage{
     width: 100%;
 }
-
-
 
 .table{
     backdrop-filter: blur(10px);
@@ -38,6 +37,8 @@
     max-width: 1000px;
     width: 100vw;
     margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.263);
+    overflow: hidden;
 }
 
 .resend{
@@ -45,9 +46,11 @@
     padding-right: 25px;
 }
 
-.check{
-    padding-left: 25px;
-    padding-right: 25px;
+.input-check{
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+    border: 1px solid var(--night-color)
 }
 
 .links-list{
@@ -59,13 +62,38 @@
 }
 
 .incoming__table-row{
-    padding-bottom: 20px;
+    padding: 10px;
 }
 
 .incoming__name{
-    padding-bottom: 8px;
+    background-color: var(--night-color);
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 14px;
+    width: max-content;
+    margin-bottom: 8px;
 }
 
 .incoming__table-container{
     
+}
+
+.incoming__date {
+    font-weight: bold;
+}
+
+.icon--resend {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    background-image: url(../images/undo2.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.icon--resend:hover {
+    background-color: rgba(0, 0, 0, 0.032);
 }

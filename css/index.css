@@ -7,6 +7,10 @@
 @import url(./reset.css);
 
 
+* {
+    font-family: Merriweather;
+}
+
 #root{
     --strong-color: #747DED;
     --light-color: #79A4F7;

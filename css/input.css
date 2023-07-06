@@ -1,3 +1,5 @@
+/* Інпути стилізовані чорною магією щоб було як в material ui */
+
 .input-container {
     position: relative;
     color: var(--night-color);
@@ -17,6 +19,7 @@
     opacity: 1;
     border-radius: 10px 10px 10px 0;
     transition-delay: 0s;
+    z-index: 10;
 }
 
 .input-container:has(.input-container__input:focus) .input-container__label--right,
