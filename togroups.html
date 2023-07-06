@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/button-group.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/links-list.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/send-message.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/selector.css">
+</head>
+<body>
+    <div id="root">
+        <div class="main-container">
+            <div class="second-container">
+                <header class="header">
+                    <h1 class="header__title">
+                        Написати повідомлення групам
+                    </h1>
+                    <p class="links-list__label">
+                        Повідомлення
+                    </p>
+
+                    <!-- ЗА МОЖЛИВОСТІ, РОЗІБРАТИСЬ ЯК ЗАПОБІГТИ ТУТ ПОВТОРЕННЯ КОДУ, БО ЦЕ ПОГАНО ЩО ЦЯ ЧАСТИНА ПОВТОРЮЄТЬСЯ
+                    В INDEX.HTML ТА INCOMING.HTML -->
+                    <ul class="links-list">
+                        <li class="links-list__item">
+                            <a href="/incoming.html" class="links-list__link">Вхідні</a>
+                        </li>
+                        <li class="links-list__item">
+                            <a href="#" class="links-list__link">Групам</a>
+                        </li>
+                        <li class="links-list__item">
+                            <a href="#" class="links-list__link">Студентам</a>
+                        </li>
+                        <li class="links-list__item">
+                            <a href="#" class="links-list__link">Викладачам</a>
+                        </li>
+                        <li class="links-list__item">
+                            <a href="#" class="links-list__link">Надіслані</a>
+                        </li>
+                    </ul>
+                </header>
+
+                <section class="main">
+                    <form action="" class="send-message">
+                        <div class="send-message__container">
+
+                            <div class="input-container send-message__to-whom" style="display: flex">
+
+                                <!-- ЦІ ДВА СЕЛЕКТОРИ СТИЛІЗУЙ ЩОБ ПІДХОДИЛИ ПІД ТЕМУ -->
+                                <select class="input-container__item selector selector--top-left-border">
+                                    <option value="" class="selector__option">=Виберіть факультет =</option>
+                                    <option value="" class="selector__option">Інститут докторантури та аспірантури</option>
+                                    <option value="" class="selector__option">Факультет будівництва, цивільної та екологічної інженерії</option>
+                                    <option value="" class="selector__option">Факультет електроенергетики та електромеханіки</option>
+                                    <option value="" class="selector__option">Факультет інтелектуальних інформаційних технологій та автоматизації</option>
+                                    <option value="" class="selector__option">Факультет Інформаційних електронних систем</option>
+                                    <option value="" class="selector__option">Факультет інформаційних технологій та комп`ютерної інженерії</option>
+                                    <option value="" class="selector__option">Факультет машинобудування та транспорту</option>
+                                    <option value="" class="selector__option">Факультет менеджменту та інформаційної безпеки</option>
+                                </select>
+                                <select class="input-container__item selector">
+                                    <option value="" class="selector__option">=Виберіть факультет =</option>
+                                    <option value="" class="selector__option">Інститут докторантури та аспірантури</option>
+                                    <option value="" class="selector__option">Факультет будівництва, цивільної та екологічної інженерії</option>
+                                    <option value="" class="selector__option">Факультет електроенергетики та електромеханіки</option>
+                                    <option value="" class="selector__option">Факультет інтелектуальних інформаційних технологій та автоматизації</option>
+                                    <option value="" class="selector__option">Факультет Інформаційних електронних систем</option>
+                                    <option value="" class="selector__option">Факультет інформаційних технологій та комп`ютерної інженерії</option>
+                                    <option value="" class="selector__option">Факультет машинобудування та транспорту</option>
+                                    <option value="" class="selector__option">Факультет менеджменту та інформаційної безпеки</option>
+                                </select>   
+                                
+                                <!-- ТУТ АНАЛОГІЧНО -->
+                                <div class="select-all-block">
+                                    Обрати всіх
+                                    <input type="checkbox">
+                                </div>
+
+
+                                <!-- ЗА МОЖЛИВОСТІ, СТОВРИ СКРИПТ В ЯКОМУ РЕАЛІЗУЙ НАПОВНЕННЯ СЕЛЕКТОРІВ ЕЛЕМЕНТАМИ З МАСИВУ, ЩОБ НЕ ВКАЗУВАТИ ЦЕ СТРОГО В ХТМЛ.
+                                НА ДАНИМ МОМЕНТ МИ ПЕРЕДАЄМО ТУТ OPTIONS НА ПРЯМУ З ХТМЛ, ЩО Є ПОГАНОЮ ПРАКТИКОЮ, ЗРОБИ В СКРІПТІ МАСИВ ДЛЯ ОПЦІЙ
+                                ПЕРШОГО І ДРУГОГО СЕЛЕКТОРА ЯКИЙ БУДЕ НАПОВНЮВАТИ В РОЗМІТЦІ СЕЛЕКТОР ОПЦІЯМИ ВІДПОВІДНО.
+
+                                В ТОМУ Ж СКРИПТІ РЕАЛІЗУЙ ЩОБ ПРИ ОБИРАННІ "ОБРАТИ ВСІХ" СЕЛЕКТОРИ СТАВАЛИ DISABLED БО ВОНИ НЕ МАЮТЬ ЖОДНОГО СЕНСУ -->
+                            </div>
+                            
+                            <div class="input-container send-message__message-content">
+                                <label class="input-container__label input-container__label--right">Ваше повідомлення</label>
+                                <textarea placeholder="a" name="" id="" class="input-container__input"></textarea>
+                                <div class="button-group send-message__send-button-group">
+                                    <button class="button-group__item button-attach"><div class="icon--attach"></div></button>
+                                    <button id="send-button" class="button-group__item button-send">Надіслати</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+        </div>
+        <footer class="footer">
+            <h2 class="footer__authors">Our Githubs</h2>
+                <ul class="footer__authors-list">
+                    <li class="footer__author-column">
+                        <a href="#" class="footer__author-link">Goga</a>
+                    </li>
+                    <li class="footer__author-column">
+                        <a href="#" class="footer__author-link">Vlad</a>
+                    </li>
+                    <li class="footer__author-column">
+                        <a href="#" class="footer__author-link">Roma</a>
+                    </li>
+                </ul>
+                <p class="footer__text">Ось так може виглядати JetIQ в майбутньому</p>
+        </footer>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.selector {
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    flex: 1;
+    width: 0px;
+}
+
+.selector__option {
+    cursor: pointer;
+}
+
+.selector--top-left-border {
+    border-top-left-radius: 6px;
+}
+
+.selector--bottom-left-border {
+    border-bottom-left-radius: 6px;
+}
+
+.selector--top-right-border {
+    border-top-right-radius: 6px;
+}
+
+.selector--bottom-right-border {
+    border-bottom-right-radius: 6px;
+}
